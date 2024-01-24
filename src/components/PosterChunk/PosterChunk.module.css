@@ -1,0 +1,49 @@
+.poster {
+  background-color: var(--Bg-Theme);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /*center */
+  align-items: center;
+  /* flex:1 1; */
+}
+
+.poster .focusParts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  height: 80%; /* width & height */
+}
+
+.poster .focusParts h1 {
+  font-size: 3.125rem; /*2.25rem*/
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.poster .focusParts p {
+  color: #292929;
+  font-size: 1.375rem;
+  /* font-style: normal; */
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 0.0275rem;
+  width: 80%; /*95% */
+}
+
+.poster .endLine {
+  color: #292929;
+  font-size: 1.375rem;
+  /* font-style: normal; */
+  font-weight: 400;
+  letter-spacing: 0.0275rem;
+}
+
+.poster .endline span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* doubt can i remove this block */
+}
