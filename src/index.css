@@ -9,3 +9,16 @@ body{
     --Bg-Theme:#DAE5F5;
     --dark-blue:#001F8B;
 }
+
+button {
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: var(--dark-blue);
+  }
+  
+button:active {
+    scale: 0.9;
+    opacity: 0.8;
+  }
+  

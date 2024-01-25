@@ -1,11 +1,13 @@
 import './App.css';
-import PosterChunk from './components/PosterChunk/PosterChunk';
+import GroupZone from './components/GroupZone/GroupZone';
+
 
 
 function App() {
   return (
     <div>
-      <PosterChunk />
+    <GroupZone />
+    
 
     </div>
   );

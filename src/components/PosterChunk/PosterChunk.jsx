@@ -2,10 +2,11 @@ import React from 'react'
 import styles from "./PosterChunk.module.css"
 import Poster from "../../assets/images/poster.png"
 import Lock from "../../assets/icons/lock.svg";
-import { useSize } from '../../context/sizeContext';
+import { useWidth } from '../../context/widthContext';
+
 
 export default function PosterChunk() {
-  const screenWidth = useSize();
+  const screenWidth = useWidth();
   return (
     <div className={`${styles.poster} ${screenWidth<675 ? "remove" : ""}`}>
         <div className={styles.focusParts}>

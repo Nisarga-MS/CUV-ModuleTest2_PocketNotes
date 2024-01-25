@@ -73,20 +73,12 @@
 }
 
 .createGroup .createButton {
-  background-color: var(--dark-blue);
-  color: #ffffff;
   width: 30%;
   height: 1.8rem; /* 2.375rem*/
   font-size: 1rem; /*1.25rem*/
   font-weight: 400;
   border-radius: 0.7rem;
-  border: none;
-  cursor: pointer;
   align-self: flex-end;
-}
-.createGroup .createButton:active {
-  scale: 0.9;
-  opacity: 0.8;
 }
 
 @media screen and (max-width: 675px) {
