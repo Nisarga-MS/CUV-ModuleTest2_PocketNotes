@@ -1,10 +1,11 @@
 import './App.css';
-import CreateGroup from './components/CreateGroup/CreateGroup';
+import GroupNames from './components/GroupNames/GroupNames';
+
 
 function App() {
   return (
     <div>
-      <CreateGroup />
+      <GroupNames />
     </div>
   );
 }

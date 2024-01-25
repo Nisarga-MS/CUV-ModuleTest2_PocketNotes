@@ -1,22 +1,58 @@
-import React, {  useState } from 'react'
+import React, {  useMemo, useState } from 'react'
 import styles from "./CreateGroup.module.css"
 
+
+//colors array
 const coloursSet=["#B38BFA","#FF79F2","#43E6FC","#F19576","#0047FF","#6691FF"]
 
 export default function CreateGroup({groups,insertGroup}) {
+
+    //states to control group(name,color,errors)
     const [groupName, setGroupName]=useState("");
     const [groupColour,setGroupColour]=useState("");
     const [nameError,setNameError]=useState("");
     const [colourError,setColourError]=useState(false);
 
-    
 
-    const handleGroupNameChange=(()=>{
+    //url friendly version of string ex: hello world output: hello-world
+    const convertToSlug =(value)=>{
+        if(value && typeof value==="string")
+        return value.trim().toLowerCase().replace(/[^a-zA-Z\d]+/g, "-");
+    }
+
+    // extracting groupId from all the groups so that it can be compared when user entered groupname
+    const groupIds = useMemo(()=>{
+        return groups.map((group)=>group.groupId)
+    },[])
+
+    //checking groupname already taken or not if taken show error
+    const handleGroupNameChange=((event)=>{
+        setGroupName(event.target.value)
+        !groupIds.includes(convertToSlug(event.target.value)) ? (nameError && setNameError(""))  : setNameError("This Name is already taken!");
 
     })
-
+  
+    // when submited checking error handling by setting flag and if no error found pass data to insert 
     const handleSubmit=(()=>{
+        let error =false;
+        if(groupColour === ""){
+            setColourError(true)
+            error =true;
+        }
+        if(groupName.trim().length===0){
+            setNameError("Name Field is required!")
+            error =true;
+        }
+        else if(nameError) error =true;
 
+        if(error) return 
+
+        const newGroup ={
+            groupName : groupName.trim(),
+            groupId:convertToSlug(groupName),
+            bgColour: groupColour
+        }
+        insertGroup(newGroup);
     })
   return (
     <div className={styles.createGroup} onClick={(event)=>event.stopPropagation()} >
@@ -40,3 +76,6 @@ export default function CreateGroup({groups,insertGroup}) {
     </div>
   )
 }
+
+
+// this section is to creategroup by adding groupname and groupcolour

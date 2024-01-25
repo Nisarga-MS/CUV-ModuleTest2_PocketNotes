@@ -19,4 +19,4 @@ export default function PosterChunk() {
   )
 }
 
-// this is Rightside Area of Pocket Notes App
+// this section  is Rightside Area of Pocket Notes App
