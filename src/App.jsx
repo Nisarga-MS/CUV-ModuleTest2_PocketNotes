@@ -1,10 +1,10 @@
 import './App.css';
-import PosterChunk from './components/PosterChunk/PosterChunk';
+import CreateGroup from './components/CreateGroup/CreateGroup';
 
 function App() {
   return (
     <div>
-      <PosterChunk />  
+      <CreateGroup />
     </div>
   );
 }

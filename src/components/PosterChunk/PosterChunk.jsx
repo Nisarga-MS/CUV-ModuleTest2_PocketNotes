@@ -18,3 +18,5 @@ export default function PosterChunk() {
     </div>
   )
 }
+
+// this is Rightside Area of Pocket Notes App
