@@ -8,6 +8,7 @@ body{
     font-family: 'Roboto', sans-serif;
     --Bg-Theme:#DAE5F5;
     --dark-blue:#001F8B;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -22,3 +23,8 @@ button:active {
     opacity: 0.8;
   }
   
+  @media screen and (max-width: 675px) {
+    .remove {
+      display: none;
+    }
+  }

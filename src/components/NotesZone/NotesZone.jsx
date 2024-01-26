@@ -15,6 +15,7 @@ export default function NotesZone() {
     const [group,setGroup] = useState(null);
     const [groupError, setGroupError] =useState(false);
 
+    //checking for group already exist or not
     useEffect(()=>{
         setGroupError(false);
         const groupExist = JSON.parse(localStorage.getItem('groups')).find((group)=> group.groupId === groupId);
@@ -28,6 +29,7 @@ export default function NotesZone() {
         
     },[groupId])
 
+    // newnote is inserted to local storage along with previous note
     const insertNote =(newNote)=>{
       setNotes((prev)=>[...prev, newNote]);
       localStorage.setItem(groupId, JSON.stringify([...notes, newNote]));
@@ -57,3 +59,6 @@ export default function NotesZone() {
     </div>
   )
 }
+
+
+//this section is notespart which as groupnametab and all the noteslip entered and textarea to type
