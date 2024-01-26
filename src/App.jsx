@@ -1,13 +1,13 @@
 import './App.css';
-import GroupZone from './components/GroupZone/GroupZone';
+import GroupPanel from './components/GroupPanel/GroupPanel';
 
 
 
 function App() {
   return (
     <div>
-    <GroupZone />
-    
+  
+    <GroupPanel />
 
     </div>
   );

@@ -10,7 +10,9 @@
     font-size: 2.1875rem; /*ref 2rem*/
     font-weight: 500;
     padding-left: 2rem;
+    
 }
+
 
 .groupZone .groupsBox{
     overflow-y: auto;
