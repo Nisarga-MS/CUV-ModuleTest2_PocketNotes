@@ -1,13 +1,13 @@
 import './App.css';
-import NoteSlip from './components/NoteSlip/NoteSlip';
+import TextArea from './components/TextArea/TextArea';
+
 
 
 
 function App() {
   return (
     <div>
-  <NoteSlip />
-    
+    <TextArea />
 
     </div>
   );
