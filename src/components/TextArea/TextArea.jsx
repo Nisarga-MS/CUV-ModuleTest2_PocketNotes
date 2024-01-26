@@ -5,7 +5,10 @@ import SendBtn from '../SendBtn';
 export default function TextArea({
     insertNote
 }) {
+    //state to manage note entered in textarea
     const [note, setNote] =useState("");
+
+    //when sendbtn is clicked the newnote entered is paased to insert along with date&time
     const  handleNoteSubmit =()=>{
         const timestamp = new Date();
         const newNote ={
@@ -28,3 +31,5 @@ export default function TextArea({
     </div>
   )
 }
+
+// this section is the textarea of pocket notes the send button is activated only when text is inserted

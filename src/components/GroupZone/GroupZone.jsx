@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./GroupZone.module.css";
 import GroupNames from "../GroupNames/GroupNames";
-import { useParams } from "react-router-dom";
+import { useParams , Link } from "react-router-dom";
 import { useWidth } from "../../context/widthContext";
-import { Link } from "react-router-dom";
+// changed link import 
 
 
 const selected = {

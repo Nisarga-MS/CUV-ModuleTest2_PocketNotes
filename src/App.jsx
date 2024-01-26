@@ -1,5 +1,5 @@
 import './App.css';
-import TextArea from './components/TextArea/TextArea';
+import NotesZone from './components/NotesZone/NotesZone';
 
 
 
@@ -7,7 +7,7 @@ import TextArea from './components/TextArea/TextArea';
 function App() {
   return (
     <div>
-    <TextArea />
+    <NotesZone />
 
     </div>
   );
