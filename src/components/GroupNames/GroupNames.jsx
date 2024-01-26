@@ -25,4 +25,4 @@ export default function GroupNames({
   );
 }
 
-// this section as groupname displayed at left side of pocket notes app
+// this section as individual groupname displayed at left side of pocket notes app

@@ -33,3 +33,6 @@ export default function GroupZone({ groups, TriggerCreateGroup }) {
 
   </div>);
 }
+
+
+//this section as names of all saved groups and has a trigger button to open modal 

@@ -1,13 +1,13 @@
 import './App.css';
-import GroupPanel from './components/GroupPanel/GroupPanel';
+import NoteSlip from './components/NoteSlip/NoteSlip';
 
 
 
 function App() {
   return (
     <div>
-  
-    <GroupPanel />
+  <NoteSlip />
+    
 
     </div>
   );
