@@ -28,7 +28,7 @@ export default function CreateGroup({groups,insertGroup}) {
     //checking groupname already taken or not if taken show error
     const handleGroupNameChange=((event)=>{
         setGroupName(event.target.value)
-        !groupIds.includes(convertToSlug(event.target.value)) ? (nameError && setNameError(""))  : setNameError("This Name is already taken!");
+        !groupIds.includes(convertToSlug(event.target.value)) ? (nameError && setNameError(""))  : setNameError("Name already taken!");
 
     })
   
@@ -40,7 +40,7 @@ export default function CreateGroup({groups,insertGroup}) {
             error =true;
         }
         if(groupName.trim().length===0){
-            setNameError("Name Field is required!")
+            setNameError("Please provide name!")
             error =true;
         }
         else if(nameError) error =true;
@@ -69,7 +69,7 @@ export default function CreateGroup({groups,insertGroup}) {
                     <div key={colour} style={{backgroundColor:colour}} className={colour === groupColour? styles.picked:""} onClick={()=>setGroupColour(colour)}></div>
                 ))}
             </div>
-            {(colourError && !groupColour) && <p className={styles.error}>Colour Field is Required!</p>}
+            {(colourError && !groupColour) && <p className={styles.error}>Please select colour!</p>}
         </div>
         <button className={styles.createButton} onClick={handleSubmitGroup}>Create</button>
     </div>

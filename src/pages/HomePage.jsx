@@ -10,4 +10,4 @@ export default function HomePage() {
   );
 }
 
-// this HomePage section renders groupPanel which is leftpart of pocket notes along with posterpage part
+// this HomePage section renders groupPanel which is leftpart of pocket notes along with posterpage part in the rightside

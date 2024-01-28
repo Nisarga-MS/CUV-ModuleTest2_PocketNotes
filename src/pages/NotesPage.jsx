@@ -10,4 +10,4 @@ export default function NotesPage() {
   );
 }
 
-// this NotesPage section renders groupPanel which is leftpart of pocket notes along with Notes taking Area part
+// this NotesPage section renders groupPanel which is leftpart of pocket notes along with Notes taking Area in right side
