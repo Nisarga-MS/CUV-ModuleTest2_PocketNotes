@@ -11,9 +11,8 @@ export default function GroupPanel({children}) {
     //fetching all saved groups from local storage set those to groups
     useEffect(()=>{
         const savedGroups =JSON.parse(localStorage.getItem('groups'));
-        if(savedGroups && savedGroups.length >0 ){
-            setGroups(savedGroups);
-        }
+        if(savedGroups && savedGroups.length >0 ) setGroups(savedGroups);
+        
     },[])
 
     // inserting newgroup to localstorage

@@ -16,3 +16,5 @@ export default function SendBtn({ disabled = true }) {
     </svg>
   );
 }
+
+//this svg is a  send button of textarea which disabled initially and enabled when text is entered

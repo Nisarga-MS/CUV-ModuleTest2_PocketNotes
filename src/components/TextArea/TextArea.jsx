@@ -18,14 +18,14 @@ export default function TextArea({
         }
 
         insertNote(newNote);
-        setNote(" ");
+        setNote("");
     }
   return (
     <div className={styles.textArea}>
         <div className={styles.inputBox}>
-            <textarea name="note" id="note" placeholder='Enter your text here...........' value={note} onChange={(event)=> setNote(event.target.value)} />
+            <textarea name="note" id="note" placeholder='Enter your text here........' value={note} onChange={(event)=> setNote(event.target.value)} />
             <div className={styles.sendButton} style={{pointerEvents:note.length>0? "auto": "none"}} onClick={handleNoteSubmit}>
-                <SendBtn disabled={!(note.length >0)} />
+                <SendBtn disabled={!(note.length > 0)} />
             </div>
         </div>
     </div>

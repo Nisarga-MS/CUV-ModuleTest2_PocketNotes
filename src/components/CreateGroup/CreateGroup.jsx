@@ -33,7 +33,7 @@ export default function CreateGroup({groups,insertGroup}) {
     })
   
     // when submited checking error handling by setting flag and if no error found pass data to insert 
-    const handleSubmit=(()=>{
+    const handleSubmitGroup= ()=>{
         let error =false;
         if(groupColour === ""){
             setColourError(true)
@@ -53,26 +53,25 @@ export default function CreateGroup({groups,insertGroup}) {
             bgColour: groupColour
         }
         insertGroup(newGroup);
-    })
+    }
   return (
     <div className={styles.createGroup} onClick={(event)=>event.stopPropagation()} >
-        <h2>Create New group</h2>
+        <h3>Create New group</h3>
         <div className={styles.input}>
             <label htmlFor='group-name'>Group Name</label>
-           <input type="text" placeholder='Enter group name' name='groupName' id="group-name" value={groupName} onChange={handleGroupNameChange} maxLength={30}/>
+           <input type="text" placeholder='Enter group name' name='groupName' id="group-name" value={groupName} onChange={handleGroupNameChange} maxLength={15}/>
             {nameError && <p className={styles.error}>{nameError}</p>}
         </div>
         <div className={styles.input}>
             <label htmlFor='group-colour'>Choose colour</label>
             <div className={styles.coloursSet} id="group-colour">
                 {coloursSet.map((colour)=>(
-                    <div key={colour} style={{backgroundColor:colour}} className={colour === groupColour? styles.selected:""} onClick={()=>setGroupColour(colour)}></div>
+                    <div key={colour} style={{backgroundColor:colour}} className={colour === groupColour? styles.picked:""} onClick={()=>setGroupColour(colour)}></div>
                 ))}
             </div>
             {(colourError && !groupColour) && <p className={styles.error}>Colour Field is Required!</p>}
         </div>
-        <button className={styles.createButton} onClick={handleSubmit}>Create</button>
-
+        <button className={styles.createButton} onClick={handleSubmitGroup}>Create</button>
     </div>
   )
 }

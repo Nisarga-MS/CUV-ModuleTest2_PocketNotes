@@ -7,7 +7,7 @@ export default function GroupNames({
   fontColor = "#000000",
 }) {
   // spliting group name by whitespaces and then conerting first character of each word to uppercase
-  const groupNameSplit = groupName.split(/[ ]+/);
+  const groupNameSplit = groupName.split(' ');
   const GroupNameTrim =
     groupNameSplit[0].charAt(0).toUpperCase() +
     (groupNameSplit[1] ? groupNameSplit[1].charAt(0).toUpperCase() : "");

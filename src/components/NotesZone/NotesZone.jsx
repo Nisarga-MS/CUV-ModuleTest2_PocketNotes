@@ -36,12 +36,12 @@ export default function NotesZone() {
     }
 
   return (
-    <div>
+    <>
       {!groupError ? 
       group && 
        <div className={styles.notesZone}>
-        <div className={styles.grouppNameTab}>
-          {screenWidth<675 && <Link to={-1}><img src={BackArrow} alt="backarrow" /></Link>}
+        <div className={styles.groupNameTab}>
+          {screenWidth<767 && <Link to={-1}><img src={BackArrow} alt="backarrow" /></Link>}
           <GroupNames groupName={group.groupName} bgColour={group.bgColour} fontColor='#FFFFFF' />
         </div>
         <div className={styles.notesBox}>
@@ -56,7 +56,7 @@ export default function NotesZone() {
         <h1>Group Isn't Exist!</h1>
        </div>
     }
-    </div>
+    </>
   )
 }
 

@@ -6,15 +6,13 @@
     bottom: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    
+    align-items: center;    
 }
 
 .textArea .inputBox {
     box-sizing: border-box;
-    width: 95%; /** sizing see */
-    height: 90%; /* can be this 85%*/
+    width: 95%; 
+    height: 85%;
     background-color: #ffffff;
     border-radius: 0.5625rem;
     border: 1px solid #cccccc;
@@ -31,10 +29,9 @@
     border: none;
     outline: none;
     font-weight: 400;
-    font-size:1.65rem ; /*doc 1.8638*/
-    font-family: 'Roboto', sans-serif;
-    
-   
+    font-size:1.8638rem ;
+    font-family: 'Roboto', sans-serif;  
+    color: #9A9A9A;
 }
 
 .textArea .inputBox .sendButton{
@@ -43,7 +40,7 @@
     cursor: pointer;
 }
 
- @media screen and (max-width: 675px) {
+@media screen and (max-width: 767px) {
 	 .textArea {
 		 height: 22%;
 	}
@@ -55,3 +52,4 @@
 	}
 }
   
+

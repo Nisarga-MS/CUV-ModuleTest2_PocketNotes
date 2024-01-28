@@ -4,10 +4,10 @@ import PosterChunk from "../components/PosterChunk/PosterChunk";
 
 export default function HomePage() {
   return (
-    <>
       <GroupPanel>
         <PosterChunk />
       </GroupPanel>
-    </>
   );
 }
+
+// this HomePage section renders groupPanel which is leftpart of pocket notes along with posterpage part
